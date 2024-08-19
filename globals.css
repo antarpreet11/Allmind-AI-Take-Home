@@ -6,6 +6,57 @@
     color: #3B44C6;
 }
 
+@keyframes bounce {
+    0%, 20% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(-8px); /* Adjust the bounce height here */
+    }
+    20%, 100% {
+
+    }
+}
+
+.bounce {
+    animation: bounce 5s infinite;
+}
+
+.delay-1 {
+    animation-delay: 0s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}
+
+.delay-3 {
+    animation-delay: 2s; 
+}
+
+.delay-4 {
+    animation-delay: 3s;
+}
+
+.delay-5 {
+    animation-delay: 4s; 
+}
+
+@keyframes bounceOpacity {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(15px); /* Adjust the bounce distance */
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
 :root {
     --color-primary: #3B44C6;
     --color-secondary: #545454;

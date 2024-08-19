@@ -13,7 +13,7 @@ const DemoSection = () => {
     <div className="bg-gray-50">
       <div className="mx-auto max-w-2xl sm:px-6 lg:max-w-7xl lg:px-8">
         <section aria-labelledby="details-heading">
-          <div className="mx-auto lg:mx-0 mt-[15%]">
+          <div className="mx-auto lg:mx-0 pt-[15%]">
             <p className="text-center mt-16 font-bold tracking-tight text-4xl">
               Try our <span className="highlight font-bold md:extrabold">demo</span> below
             </p>
@@ -76,7 +76,7 @@ const DemoSection = () => {
                         </svg>
                       </button>
                       <div className="m-4"></div>
-                      <div style={{ height: '100%', overflowY: 'auto', padding: '1rem' }}>
+                      <div style={{ height: '100%', overflowY: 'auto', padding: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <div
                           style={{
                             display: 'flex',
@@ -93,14 +93,12 @@ const DemoSection = () => {
                           style={{
                             position: 'absolute',
                             bottom: '1rem',
-                            left: '50%',
-                            transform: 'translateX(-50%)',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             color: 'var(--color-primary)',
-                            animation: '2s ease 0s infinite normal none running pulse',
                             textAlign: 'center',
+                            animation: 'bounceOpacity 2s ease infinite',
                           }}
                         >
                           <span>Start by entering text below</span>
@@ -182,14 +180,117 @@ const DemoSection = () => {
                       overflow: 'hidden',
                       backgroundColor: 'white',
                       boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-                      flex: '1 1 0%',
+                      width: '50%',
                       padding: '1rem',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
+                      position: 'relative'
                     }}
                   >
-                    <p className="text-center">Results will be displayed here.</p>
+                    <div
+                      className="flex flex-wrap"
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginBottom: '1rem'
+                      }}
+                    >
+                      <div
+                        className="mb-1"
+                        style={{
+                          display: 'flex',
+                          gap: '0.5rem'
+                        }}
+                      >
+                        <button
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '0.25rem 0.5rem',
+                            borderRadius: '0.75rem',
+                            border: '1px solid currentColor',
+                            background: 'transparent',
+                            color: 'var(--color-primary)',
+                            transition: '300ms',
+                            cursor: 'pointer',
+                            minWidth: '2.5rem',
+                            fontSize: '0.875rem'
+                          }}
+                        >
+                          Brevity
+                        </button>
+                        <button
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '0.25rem 0.5rem',
+                            borderRadius: '0.75rem',
+                            border: '1px solid currentColor',
+                            background: 'transparent',
+                            color: 'var(--color-primary)',
+                            transition: '300ms',
+                            cursor: 'pointer',
+                            minWidth: '2.5rem',
+                            fontSize: '0.875rem'
+                          }}
+                        >
+                          Relevance
+                        </button>
+                        <button
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '0.25rem 0.5rem',
+                            borderRadius: '0.75rem',
+                            border: '1px solid currentColor',
+                            background: 'transparent',
+                            color: 'var(--color-primary)',
+                            transition: '300ms',
+                            cursor: 'pointer',
+                            minWidth: '2.5rem',
+                            fontSize: '0.875rem'
+                          }}
+                        >
+                          Clarity
+                        </button>
+                      </div>
+                      <div
+                        className="flex justify-center"
+                        style={{ flex: 1 }} // Ensure this button section takes up remaining space
+                      >
+                        <button
+                          className="py-2 px-4 rounded-xl tryNow md:text-lg lg:text-xl flex items-center justify-center group transition-all duration-300 ease-in-out w-full md:w-auto"
+                        >
+                          <span className="flex items-center">
+                            Start customizing
+                            <span className="ml-2 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
+                              →
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        height: 'calc(100% - 3rem)',
+                        overflowY: 'auto'
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          height: '100%',
+                          color: 'rgb(136, 136, 136)',
+                          fontStyle: 'italic'
+                        }}
+                      >
+                        Select a criteria to view content
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

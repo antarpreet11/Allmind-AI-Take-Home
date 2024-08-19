@@ -4,7 +4,10 @@
     "@heroicons/react": "^2.1.5",
     "next": "^14.2.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-countup": "^6.5.3",
+    "react-dom": "^18.3.1",
+    "react-xarrows": "^2.0.2",
+    "typewriter-effect": "^2.21.0"
   },
   "scripts": {
     "dev": "next dev",

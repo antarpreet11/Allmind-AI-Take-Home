@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Hero from '../components/Hero';
 import MainPageSection from '../components/MainPageContent';
 import DemoSection from '../components/Demo';
 import Footer from '../components/Footer';
@@ -8,13 +8,12 @@ import '../globals.css';
 
 export default function Page() {
     return (
-        <>
-            <Header></Header>
-            <Main></Main>
-            <MainPageSection></MainPageSection>
-            <DemoSection></DemoSection>
-            <MiddleSections></MiddleSections>
-            <Footer></Footer>
-        </>
+        <main style={{ backgroundColor: 'var(--color-base-100)' }}>
+            <Hero />
+            <MainPageSection />
+            <DemoSection />
+            <MiddleSections />
+            <Footer />
+        </main>
     )
 }

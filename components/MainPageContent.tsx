@@ -1,14 +1,37 @@
 'use client';
 
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 
 const MainPageSection = () => {
   return (
     <div className="hero-section" style={styles.heroSection}>
       <div className="typewriter" style={styles.typewriter}>
-        More building. Less <span className="highlight special-blue">testing.</span>
-        <span className="cursor" style={styles.cursor}></span>
-      </div>
+        <Typewriter
+          options={{
+            autoStart: true,
+            delay: 50, 
+            deleteSpeed: 25, 
+            cursor: '<span style="color: #3B44C6;" id="typewriter-cursor">|</span>', 
+          }}
+          onInit={(typewriter) => {
+            typewriter.typeString('More building. Less <span class="highlight special-blue">labeling.</span>')
+              .pauseFor(1000)
+              .deleteChars(9)
+              .typeString('<span class="highlight special-blue">reviewing.</span>')
+              .pauseFor(1000)
+              .deleteChars(10)
+              .typeString('<span class="highlight special-blue">testing.</span>')
+              .callFunction(() => {
+                const cursorElement = document.getElementById('typewriter-cursor');
+                if (cursorElement) {
+                  cursorElement.style.display = 'none';
+                }
+              })
+              .start();
+          }}
+        />
+      </div>    
     </div>
   );
 };
